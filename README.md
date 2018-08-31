@@ -1,7 +1,7 @@
-# terraform-aws-appsync-dynamodb-datasource
+# terraform-aws-appsync-lambda-datasource
 
 
-This module creates an AppSync datasource for a DynamoDB table. 
+This module creates an AppSync datasource for a Lambda function. 
 
 ## Authors
 
