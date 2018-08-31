@@ -10,7 +10,7 @@ output "role_arn" {
 
 output "role_id" {
   description = "The id of the datasource's role."
-  value       = "${aws_appsync_datasource.lambda_datasource.id}"
+  value       = "${aws_iam_role.lambda_datasource_role.id}"
 }
 
 output "role_name" {
@@ -20,5 +20,5 @@ output "role_name" {
 
 output "role_unique_id" {
   description = "The stable and unique string identifying the datasource's role."
-  value       = "${aws_appsync_datasource.lambda_datasource.unique_id}"
+  value       = "${aws_iam_role.lambda_datasource_role.unique_id}"
 }
