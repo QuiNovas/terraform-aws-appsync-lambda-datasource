@@ -23,10 +23,13 @@ resource "aws_iam_role_policy_attachment" "invoke_lambda" {
 }
 
 resource "aws_appsync_datasource" "lambda_datasource" {
-  api_id = var.api_id
+  api_id      = var.api_id
+  description = var.description
+
   lambda_config {
     function_arn = var.lambda_function_arn
   }
+
   name             = var.name
   service_role_arn = aws_iam_role.lambda_datasource_role.arn
   type             = "AWS_LAMBDA"

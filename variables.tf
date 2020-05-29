@@ -3,6 +3,12 @@ variable "api_id" {
   type        = string
 }
 
+variable "description" {
+  default     = ""
+  description = "A description of the DataSource."
+  type        = string
+}
+
 variable "invoke_lambda_policy_arn" {
   description = "The ARN of the policy that allows for the invocation of the Lambda function."
   type        = string
