@@ -3,6 +3,11 @@ output "arn" {
   value       = aws_appsync_datasource.lambda_datasource.arn
 }
 
+output "datasource_name" {
+  description = "name of datasource"
+  value       = local.name
+}
+
 output "role_arn" {
   description = "The Amazon Resource Name (ARN) specifying the datasource's role. "
   value       = aws_iam_role.lambda_datasource_role.arn
