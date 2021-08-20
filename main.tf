@@ -15,6 +15,7 @@ data "aws_iam_policy_document" "datasource_assume_role" {
 resource "aws_iam_role" "lambda_datasource_role" {
   assume_role_policy = data.aws_iam_policy_document.datasource_assume_role.json
   name               = "${var.role_name_prefix}appsync-${var.name}-datasource"
+  tags               = var.tags
 }
 
 resource "aws_iam_role_policy_attachment" "invoke_lambda" {
