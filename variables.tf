@@ -30,3 +30,8 @@ variable "role_name_prefix" {
   type        = string
 }
 
+variable "tags" {
+  default     = {}
+  description = "A mapping of tags to assign to created resources"
+  type        = map(string)
+}
